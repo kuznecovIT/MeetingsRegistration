@@ -11,12 +11,23 @@ namespace Registration.Api.Test
         static void Main(string[] args)
         {
             // СОЗДАНИЕ 'Closed' Activity ДЛЯ ВОЗМОЖНОСТИ 'ЗАКАНЧИВАТЬ' СОБЫТИЯ
-            //ActivityEntityClient.CreateActivity(new Activity {Name = "Closed"});
+            //Console.WriteLine(ActivityEntityClient.CreateActivity(new Activity {Name = "Closed"}).Result);
+            // СОЗДАНИЕ 'Opened' Activity ДЛЯ ВОЗМОЖНОСТИ 'НАЧИНАТЬ' СОБЫТИЯ
+            //Console.WriteLine(ActivityEntityClient.CreateActivity(new Activity {Name = "Opened"}).Result);
 
             
             // 1. ПРИМЕР РЕГИСТРАЦИИ НОВОГО СОБЫТИЯ
-            // var meeting = new Meeting {Name = "NEWMEETING", Date = DateTime.Now, Description = "NEW", ActivityId = 19};
-            //ServiceTasks.RegisterNewMeeting(meeting);
+            // var meeting = new Meeting
+            // {
+            //     Name = "NEWMEETING",
+            //     Date = DateTime.Now,
+            //     Description = "NEW",
+            //     ActivityId = ActivityEntityClient.GetActivities()
+            //         .Result.Where((activity => activity.Name == "Opened"))
+            //         .FirstOrDefault()
+            //         .ActivityId,
+            // };
+            // ServiceTasks.RegisterNewMeeting(meeting);
             
 
             // 2. ПРИМЕР ОБНОВЛЕНИЯ СОБЫТИЯ
@@ -34,9 +45,16 @@ namespace Registration.Api.Test
             //ServiceTasks.DeleteMeetingsWithNoVisitors();
             
             
-            // 5. ПРИМЕР РЕГИСТРАЦИИ ПОСЕТИТЕЛЕЙ
-            //var visitor = new Visitor {FullName = "NEWVISITOR", Birthday = DateTime.Now, Email = "new@new.new", Sex = 'n', PhoneNumber = "1000-7"};
-            //ServiceTasks.RegisterNewVisitor(visitor);
+            // 5. ПРИМЕР РЕГИСТРАЦИИ ПОСЕТИТЕЛЯ
+            // var visitor = new Visitor
+            // {
+            //     FullName = "NEWVISITOR",
+            //     Birthday = DateTime.Now,
+            //     Email = "new@new.new",
+            //     Sex = 'n',
+            //     PhoneNumber = "1000-7"
+            // };
+            // ServiceTasks.RegisterNewVisitor(visitor);
             
             
             // 5.1. ПРИМЕР ЗАКРЕПЛЕНИЯ ПОСЕТИТЕЛЯ ЗА СОБЫТИЕМ
