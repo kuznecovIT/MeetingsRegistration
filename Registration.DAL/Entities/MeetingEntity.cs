@@ -18,6 +18,6 @@ namespace Meetings.DAL.Entities
         
         public string Description { get; set; }
 
-        private ActivityEntity Activity { get; set; }
+        public ActivityEntity Activity { get; set; }
     }
 }
