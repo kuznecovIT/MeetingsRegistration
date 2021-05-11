@@ -8,7 +8,8 @@
 2. Изменить уровень доступности свойств в Registration.DAL на public, 
     иначе зависимости между таблицами в базе данных не установятся при запуске initial миграции
 3. Выполнить в менеджере пакетов nuget Enable-migrations, а затем Add-Migration initial
-4. Установить уровень свойств на private для работы API в папке Entities проекта Registration.DAL
+4. (Опционально для удобной отладки через Swagger)
+     Установить уровень свойств на private для работы API в папке Entities проекта Registration.DAL
      MeetingEntity: свойство Activity -> private
      MeetingVisitorEntity: свойства Meeting, Visitor -> private
 5. Все требуемые в задании возможности вызываются в файле Program.cs проекта Registration.Api.Test, 
