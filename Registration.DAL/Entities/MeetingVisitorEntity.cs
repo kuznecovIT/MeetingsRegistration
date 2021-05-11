@@ -14,8 +14,8 @@ namespace Meetings.DAL.Entities
         [ForeignKey("Visitor")]
         public long VisitorId { get; set; }
 
-        private MeetingEntity Meeting { get; set; }
+        public MeetingEntity Meeting { get; set; }
 
-        private VisitorEntity Visitor { get; set; }
+        public VisitorEntity Visitor { get; set; }
     }
 }
